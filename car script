@@ -1,0 +1,236 @@
+
+function sandbox(var,func)
+	local env = getfenv(func)
+	local newenv = setmetatable({},{
+		__index = function(self,k)
+			if k=="script" then
+				return var
+			else
+				return env[k]
+			end
+		end,
+	})
+	setfenv(func,newenv)
+	return func
+end
+cors = {}
+mas = Instance.new("Model",game:GetService("Lighting"))
+ScreenGui0 = Instance.new("ScreenGui")
+TextButton1 = Instance.new("TextButton")
+LocalScript2 = Instance.new("LocalScript")
+Sound3 = Instance.new("Sound")
+Frame4 = Instance.new("Frame")
+TextBox5 = Instance.new("TextBox")
+TextLabel6 = Instance.new("TextLabel")
+TextBox7 = Instance.new("TextBox")
+TextBox8 = Instance.new("TextBox")
+TextButton9 = Instance.new("TextButton")
+LocalScript10 = Instance.new("LocalScript")
+TextButton11 = Instance.new("TextButton")
+ScreenGui0.Name = "Fe Car lolol"
+ScreenGui0.Parent = mas
+ScreenGui0.ResetOnSpawn = true
+ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TextButton1.Name = "Open"
+TextButton1.Parent = ScreenGui0
+TextButton1.Position = UDim2.new(0, 0, 1, 0)
+TextButton1.Size = UDim2.new(0, 100, 0, 25)
+TextButton1.AnchorPoint = Vector2.new(0, 1)
+TextButton1.BackgroundColor = BrickColor.new("Sand green")
+TextButton1.BackgroundColor3 = Color3.new(0.486275, 0.486275, 0.486275)
+TextButton1.BorderSizePixel = 0
+TextButton1.Font = Enum.Font.Michroma
+TextButton1.FontSize = Enum.FontSize.Size14
+TextButton1.Text = "Open FE CAR Menu"
+TextButton1.TextColor = BrickColor.new("Institutional white")
+TextButton1.TextColor3 = Color3.new(1, 1, 1)
+TextButton1.TextScaled = true
+TextButton1.TextSize = 14
+TextButton1.TextWrap = true
+TextButton1.TextWrapped = true
+LocalScript2.Parent = TextButton1
+ScreenGui0.ResetOnSpawn = false
+table.insert(cors,sandbox(LocalScript2,function()
+
+	local T = false
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script["Minecraft Hit Sound Effect"]:Play()
+		if T == false then
+			script.Parent.Parent.Main.Visible = true
+			T = true
+		else
+			script.Parent.Parent.Main.Visible = false
+			T = false
+		end
+	end)
+end))
+Sound3.Name = "Minecraft Hit Sound Effect"
+Sound3.Parent = LocalScript2
+Sound3.SoundId = "rbxassetid://8766809464"
+Frame4.Name = "Main"
+Frame4.Parent = ScreenGui0
+Frame4.Position = UDim2.new(0, 0, 0.5, 0)
+Frame4.Visible = false
+Frame4.Size = UDim2.new(0, 200, 0, 400)
+Frame4.AnchorPoint = Vector2.new(0, 0.5)
+Frame4.BackgroundColor = BrickColor.new("Really black")
+Frame4.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+TextBox5.Name = "HipHeight"
+TextBox5.Parent = Frame4
+TextBox5.Position = UDim2.new(0, 0, 0.200000003, 0)
+TextBox5.Size = UDim2.new(1, 0, 0, 50)
+TextBox5.BackgroundColor = BrickColor.new("Black")
+TextBox5.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TextBox5.BorderSizePixel = 0
+TextBox5.Font = Enum.Font.Cartoon
+TextBox5.FontSize = Enum.FontSize.Size14
+TextBox5.Text = "-1"
+TextBox5.TextColor = BrickColor.new("Really black")
+TextBox5.TextColor3 = Color3.new(0, 0, 0)
+TextBox5.TextScaled = true
+TextBox5.TextSize = 14
+TextBox5.TextWrap = true
+TextBox5.TextWrapped = true
+TextBox5.PlaceholderColor3 = Color3.new(0.4, 0.4, 0.4)
+TextBox5.PlaceholderText = "HipHeight"
+TextLabel6.Name = "Title"
+TextLabel6.Parent = Frame4
+TextLabel6.Size = UDim2.new(0, 200, 0, 50)
+TextLabel6.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel6.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel6.BackgroundTransparency = 1
+TextLabel6.Font = Enum.Font.Arcade
+TextLabel6.FontSize = Enum.FontSize.Size14
+TextLabel6.Text = "Real Fe car by AgentThat,Devraytix (no fake) "
+TextLabel6.TextColor = BrickColor.new("Institutional white")
+TextLabel6.TextColor3 = Color3.new(1, 1, 1)
+TextLabel6.TextScaled = true
+TextLabel6.TextSize = 14
+TextLabel6.TextWrap = true
+TextLabel6.TextWrapped = true
+TextBox7.Name = "WalkSpeed"
+TextBox7.Parent = Frame4
+TextBox7.Position = UDim2.new(0, 0, 0.400000006, 0)
+TextBox7.Size = UDim2.new(1, 0, 0, 50)
+TextBox7.BackgroundColor = BrickColor.new("Black")
+TextBox7.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TextBox7.BorderSizePixel = 0
+TextBox7.Font = Enum.Font.Cartoon
+TextBox7.FontSize = Enum.FontSize.Size14
+TextBox7.Text = "75"
+TextBox7.TextColor = BrickColor.new("Really black")
+TextBox7.TextColor3 = Color3.new(0, 0, 0)
+TextBox7.TextScaled = true
+TextBox7.TextSize = 14
+TextBox7.TextWrap = true
+TextBox7.TextWrapped = true
+TextBox7.PlaceholderColor3 = Color3.new(0.4, 0.4, 0.4)
+TextBox7.PlaceholderText = "WalkSpeed"
+TextBox8.Name = "Slippery"
+TextBox8.Parent = Frame4
+TextBox8.Position = UDim2.new(0, 0, 0.600000024, 0)
+TextBox8.Size = UDim2.new(1, 0, 0, 50)
+TextBox8.BackgroundColor = BrickColor.new("Black")
+TextBox8.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TextBox8.BorderSizePixel = 0
+TextBox8.Font = Enum.Font.Cartoon
+TextBox8.FontSize = Enum.FontSize.Size14
+TextBox8.Text = "0"
+TextBox8.TextColor = BrickColor.new("Really black")
+TextBox8.TextColor3 = Color3.new(0, 0, 0)
+TextBox8.TextScaled = true
+TextBox8.TextSize = 14
+TextBox8.TextWrap = true
+TextBox8.TextWrapped = true
+TextBox8.PlaceholderColor3 = Color3.new(0.4, 0.4, 0.4)
+TextBox8.PlaceholderText = "Slippery - 1 or 0"
+TextButton9.Name = "Enable"
+TextButton9.Parent = Frame4
+TextButton9.Position = UDim2.new(0, 0, 0.800000012, 0)
+TextButton9.Size = UDim2.new(1, 0, 0, 50)
+TextButton9.BackgroundColor = BrickColor.new("Black")
+TextButton9.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TextButton9.BorderSizePixel = 0
+TextButton9.Font = Enum.Font.SourceSans
+TextButton9.FontSize = Enum.FontSize.Size14
+TextButton9.Text = "Enable / Change"
+TextButton9.TextColor = BrickColor.new("Parsley green")
+TextButton9.TextColor3 = Color3.new(0.188235, 0.4, 0.203922)
+TextButton9.TextScaled = true
+TextButton9.TextSize = 14
+TextButton9.TextWrap = true
+TextButton9.TextWrapped = true
+LocalScript10.Name = "Handler"
+LocalScript10.Parent = Frame4
+table.insert(cors,sandbox(LocalScript10,function()
+	local Frame = script.Parent
+	local HipHeight = Frame:WaitForChild("HipHeight")
+	local WalkSpeed = Frame:WaitForChild("WalkSpeed")
+	local Slippery = Frame:WaitForChild("Slippery")
+	local Enable = Frame:WaitForChild("Enable")
+	local NoLeg = Frame:WaitForChild("NOleg")
+
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humnoid = Character:WaitForChild("Humanoid")
+
+	NoLeg.MouseButton1Click:Connect(function()
+		local Torso = Character:WaitForChild("Torso")
+
+		if Torso:FindFirstChild("Left Hip") then
+			Torso:WaitForChild("Left Hip"):Destroy()
+		end
+		if Torso:FindFirstChild("Right Hip") then
+			Torso:WaitForChild("Right Hip"):Destroy()
+		end
+	end)
+
+	Enable.MouseButton1Click:Connect(function()
+		local Walk = WalkSpeed.Text
+		local Slip = Slippery.Text
+		local Hip = HipHeight.Text
+
+		Humnoid.WalkSpeed = Walk
+		Humnoid.JumpPower = 0.001
+		Humnoid.HipHeight = Hip
+
+		local a = Instance.new("Animation")
+
+
+		a.AnimationId = "rbxassetid://129342287"
+		Humnoid:LoadAnimation(a):Play()
+
+
+		for a,a in pairs(Character:GetDescendants())do if a.ClassName=="Part"then a.CustomPhysicalProperties=PhysicalProperties.new(Slip,0,0,0,0)end end
+	end)
+
+
+
+end))
+TextButton11.Name = "NOleg"
+TextButton11.Parent = Frame4
+TextButton11.Position = UDim2.new(0, 0, 0.930000007, 0)
+TextButton11.Size = UDim2.new(0, 200, 0, 25)
+TextButton11.BackgroundColor = BrickColor.new("Institutional white")
+TextButton11.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton11.BackgroundTransparency = 1
+TextButton11.Font = Enum.Font.Arcade
+TextButton11.FontSize = Enum.FontSize.Size14
+TextButton11.Text = "No Leg"
+TextButton11.TextColor = BrickColor.new("Institutional white")
+TextButton11.TextColor3 = Color3.new(1, 1, 1)
+TextButton11.TextScaled = true
+TextButton11.TextSize = 14
+TextButton11.TextWrap = true
+TextButton11.TextWrapped = true
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
