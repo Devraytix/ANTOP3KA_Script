@@ -1,6 +1,9 @@
 for i , r in pairs(game:GetDescendants()) do
+	wait()
 	if r:IsA("RemoteEvent") and r.Name == "AC6_FE_Sounds" then
+		wait()
 		for i , v in pairs(game:GetDescendants()) do
+			wait()
 			r:FireServer("newSound",v.Name,v.Parent,"rbxassetid://6797864253",0,true)
 			r:FireServer("newSound",v.Name,v.Parent,"rbxassetid://6797864253",0,true)
 			r:FireServer("newSound",v.Name,v.Parent,"rbxassetid://6797864253",0,true)
