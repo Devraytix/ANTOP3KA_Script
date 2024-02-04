@@ -1,11 +1,2 @@
-for i , r in pairs(game.Workspace:GetDescendants()) do
-	if r:IsA("RemoteEvent") then
-		for i , v in pairs(game.ReplicatedStorage:GetDescendants()) do
-			if v:IsA("RemoteEvent") then
-			wait()
-				r:FireServer("newSound",v.Name,v.Parent,"rbxassetid://123",0,0,true)
-				print("succes"..v.Name)
-			end
-		end
-	end
-end
+update soon
+
