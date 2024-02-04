@@ -1,6 +1,6 @@
 for i , r in pairs(game:GetDescendants()) do
 	wait()
-	if r:IsA("RemoteEvent") and r.Name == "AC6_FE_Sounds" then
+	if r:IsA("RemoteEvent") then
 		wait()
 		for i , v in pairs(game.ReplicatedStorage:GetDescendants()) do
 			wait()
