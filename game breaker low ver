@@ -5,7 +5,7 @@ for i , r in pairs(game:GetDescendants()) do
 		for i , v in pairs(game.ReplicatedStorage:GetDescendants()) do
 			wait()
 			r:FireServer("newSound",v.Name,v.Parent,"rbxassetid://6797864253",0,0,true)
-			print("succes"..v.Name)
+			print("succes "..v.Name)
 		end
 	end
 end
